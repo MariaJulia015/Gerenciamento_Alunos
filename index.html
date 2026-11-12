@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC01 - DevTech Academy - Alunos</title>
+</head>
+<body>
+    <h2>DevTech Academy - Gerenciamento de Alunos</h2>
+    <hr>
+
+    <h4>Cadastro de Alunos</h4>
+    <form id="formAluno" method="post">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+        <br><br>
+
+        <label for="idade">Idade:</label><br>
+        <input type="number" id="idade" name="idade" min="0" placeholder="Digite a idade" required>
+        <br><br>
+
+        <label for="curso">Curso:</label><br>
+        <select id="curso" name="curso" required>
+            <option value="">-- Selecione --</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+        </select>
+        <br><br>
+
+        <label for="notaFinal">Nota Final:</label><br>
+        <input type="number" id="notaFinal" name="notaFinal" min="0" max="10" step="0.1" placeholder="Digite a nota final" required>
+        <br><br>
+
+        <input type="submit" id="btnCadastrar" value="Cadastrar">
+        <input type="button" id="btnCancelar" value="Cancelar edição">
+    </form>
+
+    <hr>
+
+    <h4>Alunos Cadastrados</h4>
+    <table border="1" cellpadding="3" cellspacing="0">
+        <thead>
+            <tr>
+                <th bgcolor="grey" width="50">ID</th>
+                <th bgcolor="grey" width="130">Nome</th>
+                <th bgcolor="grey" width="80">Idade</th>
+                <th bgcolor="grey" width="130">Curso</th>
+                <th bgcolor="grey" width="100">Nota Final</th>
+                <th bgcolor="grey" width="100">Situação</th>
+                <th bgcolor="grey" width="150">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaAlunos">
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h4>Relatórios</h4>
+    <input type="button" id="btnAprovados" value="Alunos aprovados">
+    <input type="button" id="btnMediaNotas" value="Média das notas finais">
+    <input type="button" id="btnMediaIdades" value="Média das idades">
+    <input type="button" id="btnOrdemAlfabetica" value="Nomes em ordem alfabética">
+    <input type="button" id="btnPorCurso" value="Quantidade de alunos por curso">
+    <br><br>
+    <div id="resultadoRelatorio"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

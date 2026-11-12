@@ -108,12 +108,12 @@ class AlunoController {
 
             
             const btnEditar = document.createElement("button");
-            btnEditar.innerHTML = '<i class="bi bi-pencil-square"></i> Editar';
+            btnEditar.innerText = "Editar";
             btnEditar.type = "button";
             btnEditar.className = "btn btn-sm btn-warning me-1";
 
             const btnExcluir = document.createElement("button");
-            btnExcluir.innerHTML = '<i class="bi bi-trash"></i> Excluir';
+            btnExcluir.innerText = "Excluir";
             btnExcluir.type = "button";
             btnExcluir.className = "btn btn-sm btn-danger";
 

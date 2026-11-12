@@ -102,16 +102,20 @@ class AlunoController {
             linha.insertCell(2).innerText = aluno.idade;
             linha.insertCell(3).innerText = aluno.curso;
             linha.insertCell(4).innerText = aluno.notaFinal;
-            linha.insertCell(5).innerText = aluno.isAprovado() ? "Aprovado" : "Reprovado";
+            linha.insertCell(5).innerHTML = aluno.isAprovado()
+                ? '<span class="badge bg-success">Aprovado</span>'
+                : '<span class="badge bg-danger">Reprovado</span>';
 
             
             const btnEditar = document.createElement("button");
-            btnEditar.innerText = "Editar";
+            btnEditar.innerHTML = '<i class="bi bi-pencil-square"></i> Editar';
             btnEditar.type = "button";
+            btnEditar.className = "btn btn-sm btn-warning me-1";
 
             const btnExcluir = document.createElement("button");
-            btnExcluir.innerText = "Excluir";
+            btnExcluir.innerHTML = '<i class="bi bi-trash"></i> Excluir';
             btnExcluir.type = "button";
+            btnExcluir.className = "btn btn-sm btn-danger";
 
             const actionCell = linha.insertCell(6);
             actionCell.appendChild(btnEditar);
